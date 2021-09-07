@@ -1,1 +1,3 @@
 my-secrets/
+terraform/
+ci/drone/server/droneserver-secret_copy.yaml
