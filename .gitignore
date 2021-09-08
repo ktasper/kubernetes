@@ -1,3 +1,4 @@
 my-secrets/
-terraform/
-ci/drone/server/droneserver-secret_copy.yaml
+terraform/eks/terraform.tfstate*
+terraform.tfvars
+courses/Books/CloudNativeWithK8s/demos
