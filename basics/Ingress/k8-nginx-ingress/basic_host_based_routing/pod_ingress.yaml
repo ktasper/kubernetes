@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-hello-world-ing
+spec:
+  rules:
+  - host: helloworld.ktw.org.uk
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-hello-world-svc
+            port: 
+              number: 8080
+  ingressClassName: nginx
