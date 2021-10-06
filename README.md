@@ -30,3 +30,12 @@ terraform apply --auto-approve
 cd terraform/eks
 terraform destroy --auto-approve
 ```
+
+# Get K(C)ontext
+
+```bash
+# Get the cluster name
+aws --region <region-code> eks list-clusters
+# Set the context
+aws --region <region-code> eks update-kubeconfig --name <cluster_name>
+```
