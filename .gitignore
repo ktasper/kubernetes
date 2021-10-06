@@ -6,3 +6,4 @@ courses/Books/CloudNativeWithK8s/demos
 .idea
 terraform/eks/.terraform.lock.hcl
 terraform/eks/.terraform.tfstate.lock.info
+config
