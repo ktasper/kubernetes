@@ -1,0 +1,36 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jenkins-ingress
+spec:
+  rules:
+  - host: jenkins.ktw.org.uk
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: jenkins
+            port: 
+              number: 8080
+  ingressClassName: nginx
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jenkins-jnlp-ingress
+spec:
+  rules:
+  - host: jenkins.ktw.org.uk
+    http:
+      paths:
+      - path: /jnlp
+        pathType: Prefix
+        backend:
+          service:
+            name: jenkins-jnlp
+            port: 
+              number: 50000
+  ingressClassName: nginx
