@@ -2,7 +2,7 @@ FROM debian:latest
 
 RUN apt-get update -y && apt-get upgrade -y 
 
-RUN apt-get install -y vim unzip curl wget less git
+RUN apt-get install -y vim unzip curl wget less git groff
 
 # Install Terraform
 RUN curl -O https://releases.hashicorp.com/terraform/1.0.8/terraform_1.0.8_linux_amd64.zip
