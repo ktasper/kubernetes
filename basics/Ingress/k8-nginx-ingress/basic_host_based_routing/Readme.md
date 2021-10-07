@@ -46,7 +46,7 @@ kubectl -n hello-world port-forward  pod/<pod-id> 8080:80
 - Now that we have deployed our pod we can create an internal service so kubernetes knows we want to route some form of traffic to the pod.
 
 ```bash
-kubectl -n hello-world apply -f ervice.yaml
+kubectl -n hello-world apply -f service.yaml
 ```
 
 # Ingress
@@ -54,7 +54,7 @@ kubectl -n hello-world apply -f ervice.yaml
 - Now that the service is ready we can point an ingress rule to the service and allow traffic.
 
 ```bash
-kubectl -n hello-world apply -f ngress.yaml
+kubectl -n hello-world apply -f ingress.yaml
 ```
 
 > The only thing you want to ensure is that your DNS Provider is set up and pointing to the ingress otherwise it will not work
