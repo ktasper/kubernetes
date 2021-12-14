@@ -11,3 +11,5 @@ my-secrets/
 terraform.tfstate*
 terraform.tfvars
 .terraform*
+terraform/terraform.exe
+terraform/digital_ocean/kubeconfig.yaml
