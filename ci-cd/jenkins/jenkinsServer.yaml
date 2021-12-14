@@ -1,3 +1,15 @@
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: jenkins-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Gi
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -21,8 +33,10 @@ spec:
           - name: jnlp-port
             containerPort: 50000
         volumeMounts:
-          - name: jenkins-vol
-            mountPath: /var/jenkins_vol
+        - mountPath: /var/jenkins_home
+          name: jenkins-data
+      restartPolicy: Always
       volumes:
-        - name: jenkins-vol
-          emptyDir: {}
+      - name: jenkins-data
+        persistentVolumeClaim:
+          claimName: jenkins-pvc
