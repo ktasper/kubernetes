@@ -7,3 +7,7 @@ courses/Books/CloudNativeWithK8s/demos
 terraform/eks/.terraform.lock.hcl
 terraform/eks/.terraform.tfstate.lock.info
 config
+my-secrets/
+terraform.tfstate*
+terraform.tfvars
+.terraform*
