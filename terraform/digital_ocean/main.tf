@@ -7,6 +7,11 @@ terraform {
   }
 }
 
+variable DIGITALOCEAN_ACCESS_TOKEN {}
+
+provider "digitalocean" {
+  token = var.DIGITALOCEAN_ACCESS_TOKEN
+}
 
 resource "digitalocean_kubernetes_cluster" "dokc" {
   name   = "dokc"
